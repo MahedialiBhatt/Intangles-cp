@@ -24,6 +24,29 @@ Then generate an internal phased execution plan and begin implementation increme
 * intangles-cp-server
 * intangles-cp-dashboard
 
+Implement EVERYTHING defined in the master plan, including:
+
+* core phases
+* production hardening
+* observability
+* frontend/dashboard phases
+* operator phases
+* backend phases
+* semantic health
+* dependency graph
+* component model
+* telemetry
+* backup/recovery
+* offline/airgap support
+* capability negotiation
+* upgrade workflows
+* deployment workflows
+* audit/event systems
+* less-priority phases/features
+* future-planned lightweight features that are explicitly marked for implementation
+
+Do not skip low-priority items unless explicitly marked as deferred/not planned in the master plan.
+
 Requirements:
 
 * preserve backward compatibility
@@ -120,5 +143,5 @@ Backend/operator rules:
 * safe retries/backoff
 * additive migrations preferred
 
-Continue implementation autonomously phase-by-phase until all planned foundational phases are completed, tested, documented, validated, and committed.
+Continue implementation autonomously phase-by-phase until all planned implementation phases are completed, tested, documented, validated, cleaned up, and committed.
 
