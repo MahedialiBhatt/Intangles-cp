@@ -69,6 +69,11 @@ Plan → Write → Test → Validate → Document → Refactor → Commit
 
 Testing requirements:
 
+* use kind cluster for Kubernetes/operator/integration/e2e testing
+* create isolated disposable kind clusters for validation
+* use lightweight TEST images only during development/testing
+* do not use production images for testing
+* use mock/test/demo infrastructure where possible
 * run unit tests
 * run integration tests
 * run e2e tests for critical flows where possible
@@ -77,13 +82,14 @@ Testing requirements:
 * validate API contracts
 * validate migration safety
 * validate rollback safety
+* destroy kind clusters after testing completes unless persistence is explicitly required
 
 Environment/tooling behavior:
 
 * install missing dependencies/tools only if required for development/testing
 * track all temporary installations performed during execution
 * after validation/testing completes, remove temporary tools/dependencies that were not originally present on the machine
-* clean temporary files, containers, caches, test artifacts, and local runtime dependencies created during execution
+* clean temporary files, containers, kind clusters, caches, test artifacts, and local runtime dependencies created during execution
 * do not leave unnecessary local tooling/installations behind
 * preserve only repository-required dependencies and artifacts
 
